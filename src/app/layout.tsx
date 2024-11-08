@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/components/Header";
+import { Toaster } from "react-hot-toast";
+import PatternGrid from "@/components/PatternGrid";
+import LightGlow from "@/components/LightGlow";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -29,8 +32,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Toaster position="top-center"/>
         <main className="bg-[#05072d] w-full h-full relative overflow-hidden">
+          <PatternGrid/>
           <Header/>
+          <LightGlow classes={'left-10 top-56 bg-[#af207a]'}/>
+          <LightGlow classes={'left-[70rem] top-[30rem] bg-orange-400'}/>
           {children}
         </main>
       </body>

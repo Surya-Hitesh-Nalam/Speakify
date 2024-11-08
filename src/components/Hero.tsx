@@ -1,6 +1,9 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React from 'react'
 import { FaLocationArrow } from 'react-icons/fa';
 import Heading from './Heading';
+import MusicWave from './MusicWave';
+import { IoMailOutline } from 'react-icons/io5';
 const labels = [
     {
       id: 1,
@@ -69,7 +72,7 @@ const labels = [
 const Hero = () => {
   return (
     <div className='relative z-20 flex flex-col justify-center text-center items-center w-full mt-20'>
-      <div className='flex justify-center w-full absolute -top-10 left-[190px] right-0'>
+      <div className='flex justify-center w-full absolute -top-10 left-[240px] right-0'>
         <div className='w-full flex flex-col justify-center text-center z-220 relative'>
             {
                 labels.map((item:any)=>(
@@ -87,6 +90,23 @@ const Hero = () => {
       <div className='w-[600px]'>
             <div className='relative z-20 mt-10'>
                 <Heading title={'AI Poweered, <br/> Human Like'} desc={`Create natural sounding Text to Speech using out latest neaural AI voice generator . Accelarate video production using TTS`}/>
+            </div>
+            <div className="absolute inset-0 -top-20 opacity-30">
+              <MusicWave/>
+            </div>
+
+            <div className='w-full flex justify-centerrelative overflow-hiddenz-20 py-10'>
+              <form action="" className='flex relative overflow-hidden w-[500px] h-fit px-4 pr-1 py-1 custom_background'>
+                  <div className='absolute inset-0 grid items-center left-2 z-20'>
+                    <IoMailOutline className='w-[20px] h-[20px]' color='white'/>
+                  </div>
+                  <input type="text" placeholder='your email' className='w-full focus:outline-none bg-transparent relative z-20 text-white pl-5'/>
+                  <div className='relative flex w-full justify-end'>
+                    <button className='ml-2 inline-flex rounded-full relative z-20 bg-gradient-to-b from-[#af207a] to-[#470c31] text-white text-sm font-medium '>
+                      Get Free
+                    </button>
+                  </div>
+              </form>
             </div>
       </div>
     </div>
